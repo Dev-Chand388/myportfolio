@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kethe Dev Chand - Software Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#14B8A6',
+                        accent: '#F97316',
+                        success: '#10B981',
+                        warning: '#F59E0B',
+                        error: '#EF4444'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-primary">Kethe Dev Chand</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-primary transition-colors">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-primary transition-colors">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-primary transition-colors">Projects</a>
+                    <a href="#certifications" class="text-gray-600 hover:text-primary transition-colors">Certifications</a>
+                    <a href="#education" class="text-gray-600 hover:text-primary transition-colors">Education</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-4 space-y-4">
+                <a href="#about" class="block text-gray-600 hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="block text-gray-600 hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="block text-gray-600 hover:text-primary transition-colors">Projects</a>
+                <a href="#certifications" class="block text-gray-600 hover:text-primary transition-colors">Certifications</a>
+                <a href="#education" class="block text-gray-600 hover:text-primary transition-colors">Education</a>
+                <a href="#contact" class="block text-gray-600 hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
+                    Kethe Dev Chand
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-600 mb-4 animate-fade-in-delay">
+                    Aspiring Software Engineer
+                </p>
+                <!-- Email prominently displayed -->
+                <div class="mb-8 animate-fade-in-delay">
+                    <a href="mailto:devchand059@gmail.com" class="inline-flex items-center gap-2 text-lg text-primary hover:text-primary/80 transition-colors font-medium">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        devchand059@gmail.com
+                    </a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <a href="https://www.linkedin.com/in/kethe-dev-chand-b6782027a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary/90 transition-all transform hover:scale-105">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/Dev-Chand388" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-all transform hover:scale-105">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                        GitHub
+                    </a>
+                    <a href="https://leetcode.com/u/KetheDevChand/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-all transform hover:scale-105">
+                        <i data-lucide="code" class="w-5 h-5"></i>
+                        LeetCode
+                    </a>
+                </div>
+                <div class="text-gray-600">
+                    <p class="flex items-center justify-center gap-2 mb-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        +91 7989404873
+                    </p>
+                    <p class="flex items-center justify-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        Telangana, India
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-700 leading-relaxed text-center">
+                    Aspiring Software Engineer with hands-on experience in building scalable, componentized, and responsive full-stack applications using Java,Python,React,SpringBoot and Node.js. Proficient in writing clean, reusable, and testable code following best practices such as object-oriented design and modular development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Frontend -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="monitor" class="w-8 h-8 text-primary mr-3"></i>
+                        <h3 class="text-xl font-semibold">Frontend</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+
+                <!-- Backend -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="server" class="w-8 h-8 text-secondary mr-3"></i>
+                        <h3 class="text-xl font-semibold">Backend</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Java</li>
+                        <li>Node.js</li>
+                        <li>Spring Boot</li>
+                    </ul>
+                </div>
+
+                <!-- Database -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="database" class="w-8 h-8 text-accent mr-3"></i>
+                        <h3 class="text-xl font-semibold">Database</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>SQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="wrench" class="w-8 h-8 text-success mr-3"></i>
+                        <h3 class="text-xl font-semibold">Tools & Practices</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>VS Code</li>
+                        <li>AWS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-semibold mb-6">Soft Skills</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-primary/10 text-primary px-4 py-2 rounded-full">Problem-Solving</span>
+                    <span class="bg-secondary/10 text-secondary px-4 py-2 rounded-full">Clear Communication</span>
+                    <span class="bg-accent/10 text-accent px-4 py-2 rounded-full">Collaborative Development</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Projects</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Quiz Master -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Quiz Master</h3>
+                        <p class="text-gray-600 mb-4 text-sm">JavaScript | React | Node.js | MongoDB</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>• Built a scalable full-stack quiz platform improving engagement by 40% with responsive design</li>
+                            <li>• Integrated real-time feedback and smooth animations to boost completion rate by 35%</li>
+                            <li>• Applied modular JavaScript and clean component-based architecture for maintainability</li>
+                            <li>• Ensured data flow, error handling, and results rendering across client-server layers</li>
+                        </ul>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Dev-Chand388/Quiz-Mastery" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                            <a href="https://quizmasteryy.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indian Real Estate Platform -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Indian Real Estate Platform</h3>
+                        <p class="text-gray-600 mb-4 text-sm">JavaScript | React | Node.js | MongoDB</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>• Developed a responsive UI with advanced filtering to enhance property discovery and retention</li>
+                            <li>• Optimized Node.js backend APIs reducing mock data load time by 35%</li>
+                            <li>• Employed reusable React components and RESTful integration to streamline property discovery</li>
+                            <li>• Added dashboard and favourite listing features to improve UX and repeat visits</li>
+                        </ul>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Dev-Chand388/Indian-Real-Estate-Platform" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                            <a href="https://realestateplatformm.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Management System -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Medical Management System</h3>
+                        <p class="text-gray-600 mb-4 text-sm">JavaScript | React | Node.js | SQLite</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>• Engineered a medication CRUD module with real-time adherence tracking (up to 90% compliance)</li>
+                            <li>• Enabled daily medication logging to improve health tracking visibility by 80%</li>
+                            <li>• Enhanced user experience by integrating a dashboard view for tracking medication status and missed doses</li>
+                            <li>• Utilized JavaScript ES6 modules to ensure clean code architecture and enhance application scalability</li>
+                        </ul>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Dev-Chand388/Medical-Management-System" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GitHub
+                            </a>
+                            <a href="https://medicalmanagementsystemm.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Certifications & Achievements</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://certificates.ccbp.in/intensive/static-website?id=ETNGRBEAJJ" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="award" class="w-6 h-6 text-blue-600 mr-3"></i>
+                        <h3 class="font-semibold">HTML & CSS</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">NxtWave | Static Website Development with HTML & CSS</p>
+                    <div class="mt-3 flex items-center text-blue-600 text-sm">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                        View Certificate
+                    </div>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1QXR7P9riN5iXUKz7Iv6Zmwc8dAitjfNn/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="award" class="w-6 h-6 text-primary mr-3"></i>
+                        <h3 class="font-semibold">React.js</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">NxtWave | Modern Front-End Development with React.js</p>
+                    <div class="mt-3 flex items-center text-primary text-sm">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                        View Certificate
+                    </div>
+                </a>
+
+                <a href="https://www.hackerrank.com/certificates/e6f37f615332" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="award" class="w-6 h-6 text-secondary mr-3"></i>
+                        <h3 class="font-semibold">Java (Basic)</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Hacker Rank | Core Java Programming Skills</p>
+                    <div class="mt-3 flex items-center text-secondary text-sm">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                        View Certificate
+                    </div>
+                </a>
+
+                <a href="https://certificates.ccbp.in/intensive/javascript-essentials?id=YWCWQVLXUJ" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="award" class="w-6 h-6 text-accent mr-3"></i>
+                        <h3 class="font-semibold">JavaScript</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">NxtWave | Frontend Web Interactions with JavaScript</p>
+                    <div class="mt-3 flex items-center text-accent text-sm">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                        View Certificate
+                    </div>
+                </a>
+
+                <a href="https://certificates.ccbp.in/intensive/programming-foundations?id=VFCMYTXYSV" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="award" class="w-6 h-6 text-purple-600 mr-3"></i>
+                        <h3 class="font-semibold">Python</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">NxtWave | Programming Fundamentals Skills</p>
+                    <div class="mt-3 flex items-center text-purple-600 text-sm">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                        View Certificate
+                    </div>
+                </a>
+
+                <a href="https://certificates.ccbp.in/intensive/introduction-to-databases?id=TOASQIDGKE" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="award" class="w-6 h-6 text-success mr-3"></i>
+                        <h3 class="font-semibold">SQL</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">NxtWave | Efficient Query Handling and DBMS (SQL)</p>
+                    <div class="mt-3 flex items-center text-success text-sm">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                        View Certificate
+                    </div>
+                </a>
+
+                <a href="https://certificates.ccbp.in/intensive/node-js?id=BITSPISHCI" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="award" class="w-6 h-6 text-warning mr-3"></i>
+                        <h3 class="font-semibold">Node.js</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">NxtWave | Server-Side Development with Node.js</p>
+                    <div class="mt-3 flex items-center text-warning text-sm">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                        View Certificate
+                    </div>
+                </a>
+
+                <a href="https://leetcode.com/u/KetheDevChand/" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="trophy" class="w-6 h-6 text-error mr-3"></i>
+                        <h3 class="font-semibold">LeetCode</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Solved 60+ DSA Problems – Data Structures & Algorithms Practice</p>
+                    <div class="mt-3 flex items-center text-error text-sm">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                        View Profile
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Education</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-primary/5 to-secondary/5 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 p-3 rounded-lg mr-6">
+                            <i data-lucide="graduation-cap" class="w-8 h-8 text-primary"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor of Technology - Computer Science</h3>
+                            <div class="flex flex-wrap items-center gap-4 mb-4">
+                                <div class="flex items-center text-gray-600">
+                                    <i data-lucide="building" class="w-4 h-4 mr-2"></i>
+                                    <span class="font-medium">Vaagdevi College of Engineering</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                                    <span>Warangal, Telangana, India</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-6 mb-4">
+                                <div class="flex items-center text-gray-600">
+                                    <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                                    <span>2020 - 2024</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="award" class="w-4 h-4 mr-2 text-success"></i>
+                                    <span class="font-semibold text-success">CGPA: 6.92</span>
+                                </div>
+                            </div>
+                            <div class="border-t border-gray-200 pt-4">
+                                <h4 class="font-semibold text-gray-900 mb-2">Key Coursework:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Data Structures & Algorithms</span>
+                                    <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Object-Oriented Programming</span>
+                                    <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Database Management Systems</span>
+                                    <span class="bg-success/10 text-success px-3 py-1 rounded-full text-sm">Software Engineering</span>
+                                    <span class="bg-warning/10 text-warning px-3 py-1 rounded-full text-sm">Web Technologies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-8">Let's Connect</h2>
+            <p class="text-xl mb-8 opacity-90">Ready to bring your ideas to life? Let's work together!</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:devchand059@gmail.com" class="flex items-center gap-3 bg-white text-primary px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    devchand059@gmail.com
+                </a>
+                <a href="tel:+917989404873" class="flex items-center gap-3 bg-white/10 backdrop-blur px-6 py-3 rounded-lg hover:bg-white/20 transition-colors">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    +91 7989404873
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-white text-center">
+        <p>&copy; 2024 Kethe Dev Chand. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                
+                // Skip if href is just '#' (placeholder links)
+                if (href === '#') {
+                    return;
+                }
+                
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.8s ease-out;
+        }
+
+        .animate-fade-in-delay {
+            animation: fade-in 0.8s ease-out 0.2s both;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</body>
+</html>
