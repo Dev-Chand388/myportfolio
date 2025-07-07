@@ -43,14 +43,21 @@ function App() {
   };
 
   const downloadResume = () => {
-    // Create a link element and trigger download
-    const link = document.createElement('a');
-    link.href = '/KetheDevChand.Resume.pdf';
-    link.download = 'KetheDevChand_Resume.pdf';
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+      // Create a link element and trigger download
+      const link = document.createElement('a');
+      link.href = '/KetheDevChand.Resume.pdf';
+      link.download = 'KetheDevChand_Resume.pdf';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      // Fallback: open in new tab
+      window.open('/KetheDevChand.Resume.pdf', '_blank');
+    }
   };
 
   return (
@@ -134,14 +141,15 @@ function App() {
             </div>
 
             {/* Resume Download Button - Large and Prominent */}
-            <div className="mb-10 animate-fade-in-delay">
+            <div className="mb-10">
               <button
                 onClick={downloadResume}
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white px-10 py-5 rounded-2xl hover:from-blue-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl font-bold text-xl border-2 border-transparent hover:border-white/20"
+                className="inline-flex items-center gap-4 bg-gradient-to-r from-blue-600 to-teal-600 text-white px-12 py-6 rounded-2xl hover:from-blue-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl font-bold text-xl border-2 border-transparent hover:border-white/20 animate-pulse"
+                style={{ animationDuration: '2s' }}
               >
-                <FileText className="w-7 h-7" />
-                Download My Resume
-                <Download className="w-6 h-6" />
+                <FileText className="w-8 h-8" />
+                <span>Download My Resume</span>
+                <Download className="w-7 h-7" />
               </button>
             </div>
 
