@@ -43,9 +43,11 @@ function App() {
   };
 
   const downloadResume = () => {
+    // Create a link element and trigger download
     const link = document.createElement('a');
     link.href = '/KetheDevChand.Resume.pdf';
     link.download = 'KetheDevChand_Resume.pdf';
+    link.target = '_blank';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -58,7 +60,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="text-xl font-bold text-blue-600">Kethe Dev Chand</div>
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8 items-center">
               {['about', 'skills', 'projects', 'certifications', 'education', 'contact'].map((section) => (
                 <button
                   key={section}
@@ -70,7 +72,7 @@ function App() {
               ))}
               <button
                 onClick={downloadResume}
-                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
                 <Download className="w-4 h-4" />
                 Resume
@@ -99,7 +101,7 @@ function App() {
               ))}
               <button
                 onClick={downloadResume}
-                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full justify-center"
+                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full justify-center font-medium"
               >
                 <Download className="w-4 h-4" />
                 Download Resume
@@ -116,9 +118,10 @@ function App() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
               Kethe Dev Chand
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 mb-4 animate-fade-in-delay">
+            <p className="text-xl sm:text-2xl text-gray-600 mb-6 animate-fade-in-delay">
               Aspiring Software Engineer
             </p>
+            
             {/* Email prominently displayed */}
             <div className="mb-8 animate-fade-in-delay">
               <a 
@@ -130,18 +133,19 @@ function App() {
               </a>
             </div>
 
-            {/* Resume Download Button - Prominent */}
-            <div className="mb-8 animate-fade-in-delay">
+            {/* Resume Download Button - Large and Prominent */}
+            <div className="mb-10 animate-fade-in-delay">
               <button
                 onClick={downloadResume}
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:to-teal-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold text-lg"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white px-10 py-5 rounded-2xl hover:from-blue-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl font-bold text-xl border-2 border-transparent hover:border-white/20"
               >
-                <FileText className="w-6 h-6" />
-                Download Resume
-                <Download className="w-5 h-5" />
+                <FileText className="w-7 h-7" />
+                Download My Resume
+                <Download className="w-6 h-6" />
               </button>
             </div>
 
+            {/* Social Links */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <a 
                 href="https://www.linkedin.com/in/kethe-dev-chand-b6782027a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
@@ -171,6 +175,8 @@ function App() {
                 LeetCode
               </a>
             </div>
+
+            {/* Contact Info */}
             <div className="text-gray-600">
               <p className="flex items-center justify-center gap-2 mb-2">
                 <Phone className="w-4 h-4" />
