@@ -16,7 +16,9 @@ import {
   ExternalLink, 
   Building, 
   Calendar, 
-  GraduationCap 
+  GraduationCap,
+  Download,
+  FileText
 } from 'lucide-react';
 
 function App() {
@@ -40,6 +42,15 @@ function App() {
     setIsMobileMenuOpen(false);
   };
 
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/KetheDevChand.Resume.pdf';
+    link.download = 'KetheDevChand_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="bg-gray-50 text-gray-900 font-sans">
       {/* Navigation */}
@@ -57,6 +68,13 @@ function App() {
                   {section}
                 </button>
               ))}
+              <button
+                onClick={downloadResume}
+                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <Download className="w-4 h-4" />
+                Resume
+              </button>
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -79,6 +97,13 @@ function App() {
                   {section}
                 </button>
               ))}
+              <button
+                onClick={downloadResume}
+                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full justify-center"
+              >
+                <Download className="w-4 h-4" />
+                Download Resume
+              </button>
             </div>
           </div>
         )}
@@ -104,6 +129,19 @@ function App() {
                 devchand059@gmail.com
               </a>
             </div>
+
+            {/* Resume Download Button - Prominent */}
+            <div className="mb-8 animate-fade-in-delay">
+              <button
+                onClick={downloadResume}
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:to-teal-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold text-lg"
+              >
+                <FileText className="w-6 h-6" />
+                Download Resume
+                <Download className="w-5 h-5" />
+              </button>
+            </div>
+
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <a 
                 href="https://www.linkedin.com/in/kethe-dev-chand-b6782027a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
@@ -500,7 +538,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-8">Let's Connect</h2>
           <p className="text-xl mb-8 opacity-90">Ready to bring your ideas to life? Let's work together!</p>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
             <a 
               href="mailto:devchand059@gmail.com" 
               className="flex items-center gap-3 bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
@@ -515,6 +553,19 @@ function App() {
               <Phone className="w-5 h-5" />
               +91 7989404873
             </a>
+          </div>
+          
+          {/* Resume Download in Contact Section */}
+          <div className="border-t border-white/20 pt-8">
+            <h3 className="text-xl font-semibold mb-4">Download My Resume</h3>
+            <button
+              onClick={downloadResume}
+              className="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg font-semibold"
+            >
+              <FileText className="w-6 h-6" />
+              Download Resume
+              <Download className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </section>
